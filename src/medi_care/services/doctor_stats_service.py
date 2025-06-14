@@ -8,7 +8,7 @@ from ..types import DoctorStatsType
 
 
 def doctor_stats_service(doctor_id, start_date, end_date):
-    response = requests.get(f'{settings.VISITS_SERVICE_URL}/visits/doctor/{doctor_id}/')
+    response = requests.get(f'{settings.VISITS_SERVICE_URL}/visits/doctor/{doctor_id}/', timeout=10)
     visits = response.json()
 
     paid_visits_count = 0
