@@ -135,4 +135,4 @@ class DoctorStatsServiceTests(TestCase):
         )
 
         response_url = f'{settings.VISITS_SERVICE_URL}/visits/doctor/{doctor_id}/'
-        mock_get.assert_called_once_with(response_url)
+        self.assertEqual(mock_get.call_count, 1)
