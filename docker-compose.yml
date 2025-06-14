@@ -1,0 +1,14 @@
+version: "3.13"
+services:
+  web-statistic:
+    build: .
+    command: python src/manage.py runserver 0.0.0.0:8200
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8200:8200"
+    networks:
+      - mc_network
+networks:
+  mc_network:
+    external: true

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "MC Statistic"
+version = "0.1.0"
+description = ""
+authors = ["MICHAŁ"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+bandit = "1.7.9"
+django = "5.1"
+django-environ = "0.11.2"
+django-extensions = "3.2.3"
+djangorestframework = "3.15.2"
+djangorestframework-simplejwt = "5.3.1"
+python = "^3.13"
+graphene-django = "^3.2.3"
+requests = "^2.32.3"
+
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
